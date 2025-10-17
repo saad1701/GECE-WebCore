@@ -1,0 +1,343 @@
+{
+  "modExRateAPI.py": [
+    {
+      "function": "GetExchangeRates_ExchangeRateAPI",
+      "params": []
+    },
+    {
+      "function": "GetCurrencyForCountry",
+      "params": [
+        "ws # As Worksheet",
+        "country # As String"
+      ]
+    },
+    {
+      "function": "FormatCurrencyRates",
+      "params": []
+    }
+  ],
+  "modGeceExport.py": [],
+  "modImport.py": [
+    {
+      "function": "ImportApplicationBasedSheet_428",
+      "params": [
+        "wsSource # As Worksheet",
+        "wsTarget # As Worksheet"
+      ]
+    },
+    {
+      "function": "ImportApplicationBasedSheet_428_part2",
+      "params": [
+        "wsSource # As Worksheet",
+        "wsTarget # As Worksheet"
+      ]
+    },
+    {
+      "function": "ImportApplicationBasedSheet",
+      "params": [
+        "wsSource # As Worksheet",
+        "wsTarget # As Worksheet"
+      ]
+    },
+    {
+      "function": "ImportAssumptionsProposalSheet",
+      "params": [
+        "wsSource # As Worksheet",
+        "wsTarget # As Worksheet"
+      ]
+    },
+    {
+      "function": "ImportDataEntrySheet",
+      "params": [
+        "wsSource # As Worksheet",
+        "wsTarget # As Worksheet"
+      ]
+    }
+  ],
+  "modMain.py": [
+    {
+      "function": "UpdateSummaryPage",
+      "params": [
+        "oForm # As UserForm"
+      ]
+    },
+    {
+      "function": "SetUnitLabels",
+      "params": [
+        "oForm # As UserForm"
+      ]
+    },
+    {
+      "function": "ModPctPossible",
+      "params": [
+        "task_pct # As Double",
+        "pct_okay # As Boolean"
+      ]
+    },
+    {
+      "function": "NewRemotePercentage",
+      "params": [
+        "task_hours # As Double",
+        "task_pct # As Double",
+        "pct_change # As Double"
+      ]
+    }
+  ],
+  "modRTFPrintFromExcel.py": [
+    {
+      "function": "NamedRangeExists",
+      "params": [
+        "rngName # As String",
+        "Optional ws # As Worksheet = Nothing"
+      ]
+    },
+    {
+      "function": "GetField",
+      "params": [
+        "rngName # As String",
+        "hardcodedDefault # As Variant",
+        "Optional wsName # As String = \"Assumptions - Proposal infos\""
+      ]
+    },
+    {
+      "function": "Table_DataEntry",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_AssumptionsProposal",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_ApplicationBased",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_DurationBased",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_TaskBased",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PriceMakeUp",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_APPOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_CourseOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_CPOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_DIOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_DOCOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_ESDOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_FATOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_HMIOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PMOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_SITEOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_Spec_OverRide",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_SystemOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_TLOverRides",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_APP",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_COURSE",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_CP",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_DI",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_DOCS",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_ESD",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_HIST_POINTS",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_HMI",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_MEETING",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_REPORTS",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_PROPOSAL_SUMMARY_TL",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "Table_Report_Override",
+      "params": [
+        "objDoc # As Object"
+      ]
+    },
+    {
+      "function": "CreatePATfile",
+      "params": [
+        "path # As String",
+        "filename # As String"
+      ]
+    },
+    {
+      "function": "SaveReplace",
+      "params": [
+        "sS # As String",
+        "sR # As String",
+        "sB # As String"
+      ]
+    },
+    {
+      "function": "MyDocumentsFolder",
+      "params": []
+    }
+  ],
+  "modSched.py": [],
+  "xmlMod.py": [
+    {
+      "function": "ExportAssumptionsProposalSheet",
+      "params": [
+        "wsTarget # As Worksheet",
+        "rinvGECE # As MSXML2.DOMDocument30",
+        "robjRoot # As Object"
+      ]
+    },
+    {
+      "function": "ExportDurationBasedSheet",
+      "params": [
+        "wsTarget # As Worksheet",
+        "rinvGECE # As MSXML2.DOMDocument30",
+        "robjRoot # As Object"
+      ]
+    },
+    {
+      "function": "ExportTaskBasedSheet",
+      "params": [
+        "wsTarget # As Worksheet",
+        "rinvGECE # As MSXML2.DOMDocument30",
+        "robjRoot # As Object"
+      ]
+    },
+    {
+      "function": "ExportApplicationBasedSheet",
+      "params": [
+        "wsTarget # As Worksheet",
+        "rinvGECE # As MSXML2.DOMDocument30",
+        "robjRoot # As Object"
+      ]
+    }
+  ]
+}

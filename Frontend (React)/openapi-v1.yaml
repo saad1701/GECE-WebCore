@@ -1,0 +1,187 @@
+
+openapi: 3.0.3
+info:
+  title: GECE API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/api/v1
+paths:
+  /auth/me:
+    get:
+      summary: Get current user profile
+      security: [{ bearerAuth: [] }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /tenants:
+    get:
+      summary: List tenants (admin only)
+      security: [{ bearerAuth: [] }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Tenant' }
+  /projects:
+    get:
+      summary: List projects
+      security: [{ bearerAuth: [] }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Project' }
+    post:
+      summary: Create project
+      security: [{ bearerAuth: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ProjectCreate' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+  /projects/{project_id}:
+    get:
+      summary: Get project by id
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+  /projects/{project_id}/uploads:
+    post:
+      summary: Upload data files
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                files:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        '202':
+          description: Accepted
+  /projects/{project_id}/calculate:
+    post:
+      summary: Run calculation
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema: { type: string }
+      responses:
+        '202':
+          description: Accepted
+  /projects/{project_id}/exports/erp:
+    post:
+      summary: Export ERP payload
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+  /projects/{project_id}/exports/cqa:
+    post:
+      summary: Export CQA payload
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+  /ai/explain:
+    post:
+      summary: AI explanation
+      security: [{ bearerAuth: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  explanation: { type: string }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Tenant:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+    User:
+      type: object
+      properties:
+        id: { type: string }
+        email: { type: string }
+        roles:
+          type: array
+          items: { type: string }
+        tenant_id: { type: string }
+    Project:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+        tenant_id: { type: string }
+        status: { type: string }
+    ProjectCreate:
+      type: object
+      required: [name]
+      properties:
+        name: { type: string }
+        description: { type: string }

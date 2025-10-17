@@ -1,0 +1,80 @@
+📁 public
+📁 src
+📄 How to run locally.txt
+📄 index.html
+📄 openapi-v1.yaml
+📄 package.json
+📄 README.md
+📄 tsconfig.json
+📄 vite.config.ts
+___________________
+📁 public:
+____________________
+src:
+📁 api  
+📁 auth  
+📁 components  
+📁 mocks  
+📁 pages
+📁 routes
+📄 App.tsx   (4 KB)  
+📄 main.tsx  (1 KB)
+_______________________
+📁 api  :
+📄 client.ts   (1 KB) 
+______________________
+📁 auth :
+📄 AuthProvider.tsx  (1 KB)
+___________________
+📁 components
+📄 FormRenderer.tsx  (4 KB)
+📄 ProtectedRoute.tsx (1 KB)
+____________________________
+📁 mocks  
+📁 data  :
+📄 application-based-json.json
+📄 assumptions-proposal-infos-json.json
+📄 coversheet-json.json
+📄 currencyupdate-json.json
+📄 data-entry-json.json
+📄 duration-based-json.json
+📄 exporttoerp-json.json
+📄 gece-to-cqa-output-json.json
+📄 global-factor-json.json
+📄 industry-json.json
+📄 price-make-up-json.json
+📄 proposal-summary-json.json
+📄 schedule-json.json
+📄 task-based-json.json
+📄 toolkit-json.json
+📄 unit-price-json.json
+📄 unit-pricing-calculations-json.json
+📄 world-cost-tables-json.json
+📄 world-currency-table-json.json
+📄 wpa-json.json
+📄 browser.ts   (1 KB)
+📄 handlers.ts  (2 KB)
+______________________
+📁 pages  
+📄 About.tsx
+📄 BestPractices.tsx
+📄 Controls.tsx
+📄 CustomTraining.tsx
+📄 DeviceIntegration.tsx
+📄 Documentation.tsx
+📄 ESD.tsx
+📄 FreeFormat.tsx
+📄 Header.tsx
+📄 Meetings.tsx
+📄 Metrics.tsx
+📄 Report.tsx
+📄 SiteServices.tsx
+📄 Summary.tsx
+📄 SystemPage.tsx
+📄 Testing.tsx
+📄 TMC.tsx
+📄 TravelLiving.tsx
+___________________
+📁 routes:
+📄 Screens.tsx – 3 KB
+📄 Splash.tsx – 1 KB

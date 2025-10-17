@@ -1,0 +1,50 @@
+How to run locally
+
+Unzip frontend.zip
+cd frontend
+npm install
+npm run dev
+
+Visit the URL shown (Vite dev server), click “Login (Mock)”, and navigate the left nav tabs
+The Header page demonstrates creating/listing projects via MSW-mocked API
+What’s included
+
+Routing and protected routes with a mock login (replace with real OIDC later)
+API client with bearer injection
+React Query provider and example query/mutation
+MSW mocks for:
+GET /api/v1/auth/me
+GET/POST /api/v1/projects
+POST uploads/calculate/exports endpoints
+POST /api/v1/ai/explain
+Tab routes matching your PyQt screens:
+Header, Best Practices, Controls, Device Integration, ESD, TMC, Testing, Documentation, Meetings, Report, Free Format, Custom Training, Site Services, Travel & Living, System, Summary, Metrics, About
+Next steps I can do on your go
+
+Wire actual field forms for each tab based on your JSON files and screenshots
+Generate a typed API client from openapi-v1.yaml
+Add role/tenant guards and error/latency mock scenarios
+Prepare env-based baseURL and OIDC configuration for seamless backend swap
+You’re all set to iterate UI quickly while the backend is built to the same OpenAPI contract.
+________________________
+Notes:
+
+You have a valid Vite+React+TS layout: index.html, src/ (App.tsx, main.tsx, pages/ components/), vite.config.ts, tsconfig.json, package.json.
+
+API mocks present: mocks/browser.ts, mocks/handlers.ts (Windows mislabels .ts as video — harmless).
+
+public/ can be empty — fine.
+
+What this gives you:
+
+UI runs fully with MSW mocks (fake login, fake endpoints).
+
+No real backend/auth yet despite openapi-v1.yaml.
+
+What you’d still need only for real backend:
+
+.env with VITE_API_BASE_URL (and OIDC vars if used).
+
+Replace mock auth/provider and handlers with real API client.
+
+If package.json has a dev script (expected with Vite), you’re good to go.
