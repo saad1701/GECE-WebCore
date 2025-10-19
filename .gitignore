@@ -1,0 +1,23 @@
+# Environment
+backend-FastAPI/.venv/
+*.env
+*.env.example
+
+# Database
+backend-FastAPI/backend/data/*.db
+*.sqlite
+
+# Python cache
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node (Frontend)
+frontend-React/node_modules/
+frontend-React/.env
