@@ -1,0 +1,7 @@
+GECE Runtime Refinement – Named Ranges Normalization
+Source DB: GECE_Runtime.db (read-only)
+Total named ranges: 8937
+Count per type: {"active": 8830, "anchor": 101, "system": 6}
+Confirmation: GECE_Runtime.db was NOT modified
+Encoding: UTF-8
+Remark: unified export (no skipped sheets)
